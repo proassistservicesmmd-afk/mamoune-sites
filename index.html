@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mamoune – Sites web pour commerçants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F6FB; --surface:#FFFFFF; --ink:#12182B; --muted:#505A75;
+  --brand:#2547D0; --on-brand:#FFFFFF; --accent:#FFD23F; --line:#D9DEEC;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1222; --surface:#151C33; --ink:#EDF0FA; --muted:#A3AECB;
+    --brand:#6C8CFF; --on-brand:#0A0F1F; --accent:#FFD23F; --line:#252E4D; color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;font-size:17px}
+main{max-width:640px;margin:0 auto;padding:0 20px 40px}
+h1,h2{line-height:1.1;margin:0}
+.hero{padding:40px 0 28px}
+.hero h1{font-size:clamp(2.2rem,10vw,3.4rem);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--muted);margin:14px 0 22px;max-width:38ch}
+.btn{display:inline-block;background:var(--brand);color:var(--on-brand);text-decoration:none;font-weight:600;padding:14px 22px;border-radius:12px;margin:0 8px 8px 0}
+.btn.alt{background:transparent;color:var(--brand);border:2px solid var(--brand);padding:12px 20px}
+h2{font-size:1.5rem;font-weight:600;margin:36px 0 12px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:6px 18px;margin:0;list-style:none}
+.box li{padding:14px 0;border-bottom:1px dashed var(--line)}
+.box li:last-child{border-bottom:0}
+.box b{display:block;font-size:1.1rem}
+.box span{color:var(--muted)}
+.price{display:flex;align-items:baseline;gap:10px;background:var(--accent);color:#12182B;border-radius:16px;padding:18px 20px;margin-top:14px}
+.price strong{font-size:2rem;font-weight:800;white-space:nowrap}
+ol.steps{margin:0;padding:6px 18px 6px 40px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+ol.steps li{padding:12px 0 12px 6px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+.cta{margin-top:36px;background:var(--brand);color:var(--on-brand);border-radius:18px;padding:24px 20px}
+.cta p{margin:0 0 14px;font-size:1.2rem;font-weight:600}
+.cta .btn{background:var(--accent);color:#12182B;margin:0}
+footer{color:var(--muted);font-size:.85rem;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>Votre commerce en ligne, en 2 jours.</h1>
+    <p>Je m’appelle Mamoune. Je crée des sites simples pour les commerçants : vos prix, vos photos, vos horaires et un bouton WhatsApp pour que vos clients vous écrivent directement.</p>
+    <a class="btn" href="https://wa.me/221775425009?text=Bonjour%20Mamoune%2C%20je%20voudrais%20un%20site%20pour%20mon%20commerce">Écrire sur WhatsApp</a>
+  </section>
+
+  <h2>Ce que je fais</h2>
+  <ul class="box">
+    <li><b>Site vitrine d’une page</b><span>Présentation, produits ou services, prix, adresse, horaires.</span></li>
+    <li><b>Bouton WhatsApp</b><span>Vos clients cliquent et vous écrivent, sans chercher votre numéro.</span></li>
+    <li><b>Lisible sur téléphone</b><span>La plupart de vos clients vous cherchent depuis leur téléphone.</span></li>
+  </ul>
+  <div class="price"><strong>15 000 F</strong><span>à partir de, payable par Wave ou Orange Money</span></div>
+
+  <h2>Comment ça se passe</h2>
+  <ol class="steps">
+    <li>Vous m’envoyez le nom du commerce, vos prix et quelques photos.</li>
+    <li>Je prépare votre site en 2 jours et vous le montre.</li>
+    <li>Vous payez la moitié au début, le reste à la livraison.</li>
+  </ol>
+
+  <div class="cta">
+    <p>Prêt à avoir votre site ?</p>
+    <a class="btn" href="https://wa.me/221775425009?text=Bonjour%20Mamoune%2C%20je%20voudrais%20un%20site%20pour%20mon%20commerce">Me contacter sur WhatsApp</a>
+  </div>
+
+  <footer>Mamoune, création de sites web. WhatsApp : +221 77 542 50 09</footer>
+</main>
+</body>
+</html>
