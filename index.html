@@ -4,103 +4,113 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MMD Pro Assist Services – Sites web et gestion de pages pour commerçants</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<meta name="description" content="Sites web simples et gestion de pages Facebook et WhatsApp pour les commerçants. Paiement par Wave ou Orange Money.">
 <style>
-:root{
-  --bg:#F4F6FB; --surface:#FFFFFF; --ink:#12182B; --muted:#505A75;
-  --brand:#2547D0; --on-brand:#FFFFFF; --accent:#FFD23F; --line:#D9DEEC;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0D1222; --surface:#151C33; --ink:#EDF0FA; --muted:#A3AECB;
-    --brand:#6C8CFF; --on-brand:#0A0F1F; --accent:#FFD23F; --line:#252E4D; color-scheme:dark;
-  }
-}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;font-size:17px}
-main{max-width:640px;margin:0 auto;padding:0 20px 40px}
-h1,h2{line-height:1.1;margin:0}
-.hero{padding:40px 0 28px}
-.hero h1{font-size:clamp(2.2rem,10vw,3.4rem);font-weight:800;letter-spacing:-.02em}
-.hero p{color:var(--muted);margin:14px 0 22px;max-width:38ch}
-.btn{display:inline-block;background:var(--brand);color:var(--on-brand);text-decoration:none;font-weight:600;padding:14px 22px;border-radius:12px;margin:0 8px 8px 0}
-.btn.alt{background:transparent;color:var(--brand);border:2px solid var(--brand);padding:12px 20px}
-h2{font-size:1.5rem;font-weight:600;margin:36px 0 12px}
-.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:6px 18px;margin:0;list-style:none}
-.box li{padding:14px 0;border-bottom:1px dashed var(--line)}
-.box li:last-child{border-bottom:0}
-.box b{display:block;font-size:1.1rem}
-.box span{color:var(--muted)}
-.price{display:flex;align-items:baseline;gap:10px;background:var(--accent);color:#12182B;border-radius:16px;padding:18px 20px;margin-top:14px}
-.price strong{font-size:2rem;font-weight:800;white-space:nowrap}
-ol.steps{margin:0;padding:6px 18px 6px 40px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
-ol.steps li{padding:12px 0 12px 6px;border-bottom:1px dashed var(--line)}
-ol.steps li:last-child{border-bottom:0}
-.cta{margin-top:36px;background:var(--brand);color:var(--on-brand);border-radius:18px;padding:24px 20px}
-.cta p{margin:0 0 14px;font-size:1.2rem;font-weight:600}
-.cta .btn{background:var(--accent);color:#12182B;margin:0}
-footer{color:var(--muted);font-size:.85rem;margin-top:28px}
+  :root{--bleu:#0f2a43;--vert:#1faa59;--gris:#f4f6f8;--texte:#1c2733;--doux:#5b6875}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texte);background:#fff;line-height:1.6}
+  header{background:var(--bleu);color:#fff;padding:14px 20px;font-weight:700;letter-spacing:.3px}
+  header span{color:var(--vert)}
+  .hero{background:linear-gradient(160deg,var(--bleu),#1d4468);color:#fff;padding:48px 20px 56px;text-align:center}
+  .hero h1{font-size:1.9rem;line-height:1.25;margin:0 0 14px}
+  .hero p{max-width:560px;margin:0 auto 24px;color:#d6e2ee}
+  .btn{display:inline-block;background:var(--vert);color:#fff;text-decoration:none;border:0;border-radius:10px;padding:14px 22px;font:inherit;font-weight:700;cursor:pointer}
+  .btn.alt{background:transparent;border:2px solid #fff;margin-left:8px}
+  main{max-width:760px;margin:0 auto;padding:0 20px}
+  h2{color:var(--bleu);font-size:1.5rem;margin:44px 0 16px}
+  .cartes{display:grid;gap:16px}
+  @media(min-width:640px){.cartes{grid-template-columns:1fr 1fr}}
+  .carte{background:var(--gris);border-radius:14px;padding:22px;box-shadow:0 2px 8px rgba(15,42,67,.08)}
+  .carte h3{margin:0 0 10px;color:var(--bleu)}
+  .carte ul{margin:0 0 16px;padding-left:20px;color:var(--doux)}
+  .carte li{margin-bottom:6px}
+  .prix{font-size:1.4rem;font-weight:800;color:var(--bleu)}
+  .prix small{display:block;font-size:.85rem;font-weight:400;color:var(--doux)}
+  .etapes{counter-reset:e;list-style:none;padding:0;margin:0}
+  .etapes li{counter-increment:e;position:relative;padding:4px 0 18px 52px}
+  .etapes li:before{content:counter(e);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--bleu);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .note{background:#eaf7f0;border-left:4px solid var(--vert);padding:12px 16px;border-radius:8px;color:var(--texte)}
+  form{display:grid;gap:12px}
+  input,select{width:100%;padding:14px;border:1px solid #cfd8e0;border-radius:10px;font:inherit;background:#fff}
+  input:focus,select:focus{outline:2px solid var(--vert);border-color:var(--vert)}
+  footer{background:var(--bleu);color:#c7d5e3;text-align:center;padding:28px 20px;margin-top:56px;font-size:.92rem}
+  footer strong{color:#fff}
 </style>
 </head>
 <body>
+
+<header>MMD <span>Pro Assist</span> Services</header>
+
+<section class="hero">
+  <h1>Votre commerce en ligne, en 2 jours.</h1>
+  <p>Je m’appelle Mamoune, de MMD Pro Assist Services. Je crée des sites simples pour les commerçants et je gère leurs pages Facebook et WhatsApp : vos prix, vos photos, vos horaires et un bouton WhatsApp pour que vos clients vous écrivent directement.</p>
+  <a class="btn" href="#demande">Demander mon offre</a>
+  <a class="btn alt" href="https://www.tiktok.com/@mamounediouf28" target="_blank" rel="noopener">Voir sur TikTok</a>
+</section>
+
 <main>
-  <section class="hero">
-    <h1>Votre commerce en ligne, en 2 jours.</h1>
-    <p>Je m’appelle Mamoune, de MMD Pro Assist Services. Je crée des sites simples pour les commerçants et je gère leurs pages Facebook et WhatsApp : vos prix, vos photos, vos horaires et un bouton WhatsApp pour que vos clients vous écrivent directement.</p>
-    <a class="btn alt" href="https://www.tiktok.com/@mamounediouf28" target="_blank" rel="noopener">Voir sur TikTok</a>
-  </section>
 
-  <h2>Ce que je fais</h2>
-  <ul class="box">
-    <li><b>Site vitrine d’une page</b><span>Présentation, produits ou services, prix, adresse, horaires.</span></li>
-    <li><b>Bouton WhatsApp</b><span>Vos clients cliquent et vous écrivent, sans chercher votre numéro.</span></li>
-    <li><b>Lisible sur téléphone</b><span>La plupart de vos clients vous cherchent depuis leur téléphone.</span></li>
-  </ul>
-  <div class="price"><strong>15 000 F</strong><span>à partir de, payable par Wave ou Orange Money</span></div>
+  <h2>Mes services</h2>
+  <div class="cartes">
+    <div class="carte">
+      <h3>Site vitrine d’une page</h3>
+      <ul>
+        <li>Présentation, produits ou services</li>
+        <li>Prix, adresse et horaires</li>
+        <li>Bouton WhatsApp pour vous écrire</li>
+        <li>Lisible sur téléphone</li>
+      </ul>
+      <div class="prix">15 000 F<small>à partir de, payable par Wave ou Orange Money</small></div>
+    </div>
+    <div class="carte">
+      <h3>Gestion de vos pages</h3>
+      <ul>
+        <li>Publications régulières avec vos photos et vos prix</li>
+        <li>Réponses rapides à vos clients</li>
+        <li>Une page propre qui donne confiance</li>
+        <li>Première semaine d’essai : 3 publications offertes</li>
+      </ul>
+      <div class="prix">15 000 F par mois<small>à partir de, payable par Wave ou Orange Money</small></div>
+    </div>
+  </div>
 
-  <h2>Je gère vos pages Facebook et WhatsApp</h2>
-  <ul class="box">
-    <li><b>Publications régulières</b><span>Avec vos photos et vos prix, pour attirer plus de clients.</span></li>
-    <li><b>Réponses rapides</b><span>Je réponds aux messages de vos clients à votre place.</span></li>
-    <li><b>Une page propre</b><span>Une page soignée qui donne confiance. Première semaine d’essai : 3 publications offertes.</span></li>
-  </ul>
-  <div class="price"><strong>15 000 F par mois</strong><span>à partir de, payable par Wave ou Orange Money</span></div>
+  <h2>Comment ça se passe</h2>
+  <ol class="etapes">
+    <li>Vous m’envoyez le nom du commerce, vos prix et quelques photos.</li>
+    <li>Je prépare votre site en 2 jours et vous le montre.</li>
+    <li>Vous payez la moitié au début, le reste à la livraison.</li>
+  </ol>
+  <p class="note">Pour la gestion de pages, le paiement est mensuel et la première semaine d’essai est offerte.</p>
 
-
-  <h2>Demandez votre offre</h2>
-  <form id="demande" style="display:grid;gap:10px">
-    <input id="nom" placeholder="Votre nom" required style="padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit;width:100%;box-sizing:border-box">
-    <input id="commerce" placeholder="Nom de votre commerce" required style="padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit;width:100%;box-sizing:border-box">
-    <select id="besoin" style="padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit;width:100%;box-sizing:border-box">
+  <h2 id="contact">Demandez votre offre</h2>
+  <form id="demande">
+    <input id="nom" placeholder="Votre nom" required>
+    <input id="commerce" placeholder="Nom de votre commerce" required>
+    <select id="besoin">
       <option>Un site web</option>
       <option>La gestion de mes pages</option>
       <option>Les deux</option>
     </select>
     <button type="submit" class="btn">Envoyer ma demande sur WhatsApp</button>
   </form>
-  <script>
-    document.getElementById('demande').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var msg = 'Bonjour MMD Pro Assist, je suis ' + document.getElementById('nom').value +
-        ', commerce : ' + document.getElementById('commerce').value +
-        '. Je souhaite : ' + document.getElementById('besoin').value + '.';
-      window.location.href = 'https://wa.me/221775425009?text=' + encodeURIComponent(msg);
-    });
-  </script>
-  <h2>Comment ça se passe</h2>
-  <ol class="steps">
-    <li>Vous m’envoyez le nom du commerce, vos prix et quelques photos.</li>
-    <li>Je prépare votre site en 2 jours et vous le montre.</li>
-    <li>Vous payez la moitié au début, le reste à la livraison.</li>
-  </ol>
 
-
-  <footer>MMD Pro Assist Services, par Mamoune. Sites web et gestion de pages. WhatsApp : +221 77 542 50 09</footer>
 </main>
+
+<footer>
+  <strong>MMD Pro Assist Services</strong>, par Mamoune<br>
+  Sites web et gestion de pages<br>
+  WhatsApp : +221 77 542 50 09
+</footer>
+
+<script>
+  document.getElementById('demande').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var msg = 'Bonjour MMD Pro Assist, je suis ' + document.getElementById('nom').value +
+      ', commerce : ' + document.getElementById('commerce').value +
+      '. Je souhaite : ' + document.getElementById('besoin').value + '.';
+    window.location.href = 'https://wa.me/221775425009?text=' + encodeURIComponent(msg);
+  });
+</script>
+
 </body>
 </html>
-
