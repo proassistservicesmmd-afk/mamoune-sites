@@ -71,6 +71,27 @@ footer{color:var(--muted);font-size:.85rem;margin-top:28px}
   </ul>
   <div class="price"><strong>15 000 F par mois</strong><span>à partir de, payable par Wave ou Orange Money</span></div>
 
+
+  <h2>Demandez votre offre</h2>
+  <form id="demande" style="display:grid;gap:10px">
+    <input id="nom" placeholder="Votre nom" required style="padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit;width:100%;box-sizing:border-box">
+    <input id="commerce" placeholder="Nom de votre commerce" required style="padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit;width:100%;box-sizing:border-box">
+    <select id="besoin" style="padding:12px;border:1px solid #ccc;border-radius:8px;font:inherit;width:100%;box-sizing:border-box">
+      <option>Un site web</option>
+      <option>La gestion de mes pages</option>
+      <option>Les deux</option>
+    </select>
+    <button type="submit" class="btn">Envoyer ma demande sur WhatsApp</button>
+  </form>
+  <script>
+    document.getElementById('demande').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = 'Bonjour MMD Pro Assist, je suis ' + document.getElementById('nom').value +
+        ', commerce : ' + document.getElementById('commerce').value +
+        '. Je souhaite : ' + document.getElementById('besoin').value + '.';
+      window.location.href = 'https://wa.me/221775425009?text=' + encodeURIComponent(msg);
+    });
+  </script>
   <h2>Comment ça se passe</h2>
   <ol class="steps">
     <li>Vous m’envoyez le nom du commerce, vos prix et quelques photos.</li>
